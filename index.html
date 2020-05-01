@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <script src="js/init.js"></script>
+    <script src="js/controller/game_c.js"></script>
+    <script src="js/controller/manager_c.js"></script>
+    <script src="js/controller/scoreboard_c.js"></script>
+    <script src="js/dataService/serverConnection.js"></script>
+    <script src="js/model/hand_m.js"></script>
+    <script src="js/model/player_m.js"></script>
+    <script src="js/model/scoreboardNode_m.js"></script>
+    <script src="js/view/gameView.js"></script>
+    <script src="js/view/interfaceHTMLToJS_v.js"></script>
+    <script src="js/view/scoreboardView.js"></script>
+    <title>SSPLS</title>
+
+</head>
+<body class="justify-content-center">
+<div id="scoreboardSite" class="">
+    <div id="scoreboardLocal" class="row scoreboard localMode">
+        <h1 class="d-flex justify-content-center col-12">local scoreboard</h1>
+        <div id="scoreboardStandard" class="col-4 justify-content-center">
+            <h2 class="justify-content-center d-flex">3-state game</h2>
+            <!--placeholder-->
+        </div>
+        <div id="scoreboardExpanded" class="col-4 justify-content-center">
+            <h2 class="justify-content-center d-flex">5-state game</h2>
+            <!--placeholder-->
+        </div>
+        <div id="scoreboardEscalation" class="col-4 justify-content-center">
+            <h2 class="justify-content-center d-flex">15-state game</h2>
+            <!--placeholder-->
+        </div>
+    </div>
+    <div id="scoreboardServer" class="row scoreboard serverMode">
+        <h1 class="d-flex justify-content-center col-12">server scoreboard</h1>
+        <div id="scoreboardStandardServer" class="justify-content-center col-12">
+            <h2 class="justify-content-center d-flex">3-state game</h2>
+            <!--placeholder-->
+        </div>
+    </div>
+    <div id="scoreboardManage" class="row justify-content-center">
+        <button type="button" id="saveButton" class="btn btn-outline-light col-xl-4 localMode">save scoreboard</button>
+        <button type="button" id="loadButton" class="btn btn-outline-light col-xl-4">load scoreboard</button>
+    </div>
+    <div id="changeMode" class="justify-content-center">
+        <button type="button" id="changingMode" class="btn btn-outline-light col-12">current mode: local - click to change mode</button>
+    </div>
+    <!--<form id="startGame" onsubmit="return startGame()" class="row">-->
+    <form id="startGame" action="javascript:void(0);" onsubmit="" class="row">
+        <label for="userName"></label>
+        <input id="userName" class="col-xl-7 form-control" type="text" placeholder="enter your username" name="pName" minlength="3" required autofocus/>
+        <button type="submit" id="startTheGame" class="btn btn-outline-light col-xl-4 offset-xl-1">Let's go!</button>
+        <div class="localMode row">
+            <input type="radio" id="3state" class="col-xl-1 text-left" name="gameMode" value="0"/>
+            <label for="3state" class="col-xl-11">scissor / stone / paper</label>
+            <input type="radio" id="5state" class="col-xl-1" name="gameMode" value="1" checked/>
+            <label for="5state" class="col-xl-11">scissor / stone / paper / lizard / spock</label>
+            <input type="radio" id="15state" class="col-xl-1" name="gameMode" value="2"/>
+            <label for="15state" class="col-xl-11">escalation 15-state</label>
+            <input type="radio" id="simulation" class="col-xl-1" name="gameMode" value="999"/>
+            <label for="simulation" class="col-xl-11">computer vs computer</label>
+        </div>
+
+    </form>
+</div>
+<div id="gameSite" style="display: none" class="row justify-content-center">
+    <div id="gamePlay" class="row justify-content-center">
+        <!--placeholder-->
+    </div>
+    <div id="gameScore">
+        <h1 class="d-flex justify-content-center">game score</h1>
+        <div id="gameScoreNames" class="d-flex justify-content-center">
+            <!--placeholder-->
+        </div>
+        <div id="gameScoreValue" class="d-flex justify-content-center">
+            <!--placeholder-->
+        </div>
+        <button type="button" id="backToScoreButton" class="btn btn-outline-light col-4 offset-4" >go back to score</button>
+        <h1 class="d-flex justify-content-center">last round</h1>
+        <div id="lastRoundNames" class="d-flex justify-content-center">
+            <!--placeholder-->
+        </div>
+        <div id="lastRound" class="d-flex justify-content-center align-middle">
+            <!--placeholder-->
+        </div>
+
+        <div id="countdown" class="d-flex justify-content-center align-middle">
+            <label for="countdownONOFF" class="col-xl-2">Countdown: </label>
+            <input id="countdownONOFF" type="checkbox" class="col-xl-1 text-left" checked data-toggle="toggle">
+            <div id="countdownText" class="col-xl-9 text-left">
+                <!--placeholder-->
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="startStopSimulation" class="btn btn-outline-light col-4 offset-4"  style="display:none;">stop/start simulation</button>
+    <div id="history">
+        <h1 class="d-flex justify-content-center">game history</h1>
+        <ul>
+            <!--placeholder-->
+        </ul>
+    </div>
+    <button type="button" id="goTop" class="btn btn-outline-light">go Top</button>
+    <button id="rulesButton" type="button" class="btn btn-outline-light">rules</button>
+    <img id="ruleTooltip" alt="ruleTooltip" src='img/rules/15-state.png' style="display: none;"/>
+</div>
+
+</body>
+</html>

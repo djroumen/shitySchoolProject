@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8807c59c-65e8-4959-b48c-5a296601b0c3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zvi2kBDHXUKxGERA8OLtMzphRd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img\rules" />
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\js" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8807c59c-65e8-4959-b48c-5a296601b0c3" name="Default Changelist" comment="" />
+      <created>1585726846657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585726846657</updated>
+      <workItem from="1585726848253" duration="22792000" />
+      <workItem from="1585805335152" duration="5241000" />
+      <workItem from="1585824192035" duration="22186000" />
+      <workItem from="1585918296434" duration="18291000" />
+      <workItem from="1586036654842" duration="778000" />
+      <workItem from="1586087079397" duration="1794000" />
+      <workItem from="1586153485602" duration="2062000" />
+      <workItem from="1586182111409" duration="19992000" />
+      <workItem from="1586261215771" duration="954000" />
+      <workItem from="1586328683703" duration="7608000" />
+      <workItem from="1586855160093" duration="12328000" />
+      <workItem from="1586930071102" duration="15211000" />
+      <workItem from="1587536131782" duration="5275000" />
+      <workItem from="1587587048214" duration="303000" />
+      <workItem from="1587641968346" duration="6026000" />
+      <workItem from="1587653306135" duration="193000" />
+      <workItem from="1587675429515" duration="1203000" />
+      <workItem from="1587971572832" duration="5095000" />
+      <workItem from="1588138019702" duration="5502000" />
+      <workItem from="1588146528112" duration="6000" />
+      <workItem from="1588149781314" duration="8431000" />
+      <workItem from="1588252337151" duration="6652000" />
+      <workItem from="1588279027593" duration="2539000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2651" y="311" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588152834293">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2651" y="311" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588152834293" />
+    <state x="2651" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585772194912" />
+    <state x="2610" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586936962654">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586936962654" />
+    <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585737849487" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1586260210764">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586260210764" />
+    <state x="2381" y="162" width="1421" height="715" key="SettingsEditor" timestamp="1586335585381">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="162" width="1421" height="715" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586335585381" />
+    <state x="2543" y="217" width="672" height="653" key="search.everywhere.popup" timestamp="1585909261796">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="217" width="672" height="653" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585909261796" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1585769877998" />
+  </component>
+</project>
