@@ -2,8 +2,10 @@
 
 
 class InterfaceHTMLToJS {
-    constructor(startGameFn, startStopSimulationFn) {
-
+    gameAudio = document.querySelector("#epicSound");
+    constructor(startGameFn) {
+        this.gameAudio.loop = true;
+        this.gameAudio.volume = 0.4;
         //ToDo querySelector vs getElementByID
         document.querySelector("#startGame").addEventListener("submit", () => {
             startGameFn(document.querySelector("input[name='gameMode']:checked").value, document.querySelector("#userName").value);
@@ -35,9 +37,11 @@ class InterfaceHTMLToJS {
         if (toScoreSite) {
             document.querySelector("#scoreboardSite").style.display = "initial";
             document.querySelector("#gameSite").style.display = "none";
+            this.gameAudio.load();
         } else {
             document.querySelector("#scoreboardSite").style.display = "none";
             document.querySelector("#gameSite").style.display = "initial";
+            this.gameAudio.play();
         }
     }
 

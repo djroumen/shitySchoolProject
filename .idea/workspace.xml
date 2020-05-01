@@ -35,12 +35,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img\rules" />
-      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1_SpringRoman_V3\sound" />
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img\rules" />
+      <recent name="C:\Users\djrou\Documents\GoogleDrive\Testat_WED1\img" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -75,7 +76,7 @@
       <workItem from="1588146528112" duration="6000" />
       <workItem from="1588149781314" duration="8431000" />
       <workItem from="1588252337151" duration="6652000" />
-      <workItem from="1588279027593" duration="3504000" />
+      <workItem from="1588279027593" duration="4619000" />
     </task>
     <servers />
   </component>

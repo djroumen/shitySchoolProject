@@ -14,13 +14,14 @@ class Manager {
 
     constructor() {
         scoreboard = [new Scoreboard("#scoreboardStandard"), new Scoreboard("#scoreboardExpanded"), new Scoreboard("#scoreboardEscalation"), new Scoreboard("#scoreboardStandardServer")];
-        interfaceHTMLToJS = new InterfaceHTMLToJS(this.startGame, this.startStopSimulation);
+        interfaceHTMLToJS = new InterfaceHTMLToJS(this.startGame);
     }
     startGame(gameMode, pName) {
         interfaceHTMLToJS.changeSite();
         game = new Game(pName, parseInt(gameMode));
         console.log("start the game as " + pName);
         console.log(parseInt(gameMode));
+
     }
 
 
