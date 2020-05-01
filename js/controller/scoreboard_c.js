@@ -60,6 +60,7 @@ class Scoreboard {
     }
 
     async loadScoreServer() {
+        this.scoreboardView.changeToLoadText(this.whereHTML);
         this.first = null;
         const dataFromServer = await loadScore_fetch();
 

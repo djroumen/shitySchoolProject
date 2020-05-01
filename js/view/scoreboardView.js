@@ -17,4 +17,7 @@ class ScoreboardView{
         } while ((current != null)&&(counter<10));
         document.querySelector(whereIsScoreboard).append(newol);
     }
+    changeToLoadText(whereIsScoreboard){
+        document.querySelectorAll(whereIsScoreboard + " ol" ).forEach(e => e.innerHTML = "loading...");
+    }
 }
