@@ -81,10 +81,11 @@ class GameView {
     sleep(milliseconds) {
         return new Promise(resolve => setTimeout(resolve, milliseconds));
     }
-    async countdown(seconds) {
+    async countdown() {
         if (document.querySelector("#countdownONOFF").checked === true) {
             this.isCountdownRunning = true;
             document.querySelector("#gamePlay").style.filter = "grayscale(100%) blur(8px)";
+            let seconds = secToWaitBetweenRound;
             while (seconds > 0) {
                 document.querySelector("#countdownText").innerHTML = seconds + " seconds until next round...";
                 seconds--;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="icon" type="image/png" href="https://i.pinimg.com/originals/d5/fa/63/d5fa636047992a12cc9c68a0e24bb846.png">
     <script src="js/init.js"></script>
     <script src="js/controller/game_c.js"></script>
     <script src="js/controller/manager_c.js"></script>
@@ -61,8 +62,6 @@
             <label for="5state" class="col-xl-11">scissor / stone / paper / lizard / spock</label>
             <input type="radio" id="15state" class="col-xl-1" name="gameMode" value="2"/>
             <label for="15state" class="col-xl-11">escalation 15-state</label>
-            <input type="radio" id="simulation" class="col-xl-1" name="gameMode" value="999"/>
-            <label for="simulation" class="col-xl-11">computer vs computer</label>
         </div>
 
     </form>
@@ -97,7 +96,6 @@
         </div>
     </div>
 
-    <button type="button" id="startStopSimulation" class="btn btn-outline-light col-4 offset-4"  style="display:none;">stop/start simulation</button>
     <div id="history">
         <h1 class="d-flex justify-content-center">game history</h1>
         <ul>

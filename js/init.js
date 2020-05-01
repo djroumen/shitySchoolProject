@@ -6,7 +6,7 @@ let manager;
 
 let isSimulationRunning = false;
 let isLocal = false;
-
+const secToWaitBetweenRound = 3;
 
 
 

@@ -8,7 +8,6 @@ const winner_e = {
 class Game {
     player;
     gameMode;
-    simulationIntervalId;
     srcString = "img/";
     gameView = new GameView();
     hands = [];
@@ -20,9 +19,6 @@ class Game {
         this.gameMode = gameMode;
         this.gameView.removeHistory();
         this.createHands();
-        if (this.gameMode === gameMode_e.simulation) {
-            this.launchSimulation();
-        }
         if (this.gameMode === gameMode_e.escalation) {
             this.srcString += "escalation/";
         }
@@ -67,15 +63,6 @@ class Game {
             default:
         }
         console.log("playable Hands: " + JSON.stringify(this.hands));
-    }
-
-    launchSimulation() {
-        this.gameMode = gameMode_e.expanded;
-        this.player.name = "SimulationComputer";
-        this.simulationIntervalId = window.setInterval(() => {
-            this.calcWinner(this.generateComputerSelection())
-        }, 100);
-        interfaceHTMLToJS.buttonChangeSimulation();
     }
 
     async calcWinner(playerSelection, isServer = false) {

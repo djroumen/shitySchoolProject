@@ -20,8 +20,6 @@ class InterfaceHTMLToJS {
 
         document.querySelector("#backToScoreButton").addEventListener("click", () => this.goBackToScore());
 
-        document.querySelector("#startStopSimulation").addEventListener("click", startStopSimulationFn);
-
         document.querySelector("#goTop").addEventListener("click", this.scrollToTop);
 
         document.querySelector("#rulesButton").addEventListener("mouseover", () => {
@@ -72,22 +70,5 @@ class InterfaceHTMLToJS {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-
-    buttonChangeSimulation() {
-        if (!isSimulationRunning) {
-            document.querySelector("#backToScoreButton").onclick = endSimulationFn;
-            document.querySelector("#startStopSimulation").style.display = "block";
-        } else {
-            document.querySelector("#backToScoreButton").onclick = this.goBackToScore;
-            document.querySelector("#startStopSimulation").style.display = "none";
-        }
-        isSimulationRunning = !isSimulationRunning;
-    }
-
-    endSimulation() {
-        interfaceHTMLToJS.changeSite(true);
-        interfaceHTMLToJS.buttonChangeSimulation();
-    }
-
 
 }
