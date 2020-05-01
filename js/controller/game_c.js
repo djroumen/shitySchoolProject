@@ -103,7 +103,7 @@ class Game {
         this.gameView.updateLastRound(this.gameMode, this.srcString, playerSelection, computerSelection);
         this.gameView.addNewHistoryEntry(this.gameMode, this.srcString, this.player.name, playerSelection, computerSelection, winnerString);
         console.log("Winner: " + winnerString);
-        await this.gameView.countdown(3);
+        await this.gameView.countdown(winner);
     }
 
     compareHands(playerHand, computerHand) {

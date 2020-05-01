@@ -5,8 +5,10 @@ class InterfaceHTMLToJS {
     gameAudio = document.querySelector("#epicSound");
     constructor(startGameFn) {
         this.gameAudio.loop = true;
-        this.gameAudio.volume = 0.4;
-        //ToDo querySelector vs getElementByID
+        this.gameAudio.volume = 0.2;
+
+        document.querySelector("#soundONOFF").addEventListener("change", () => this.turnMusicOnOff())
+
         document.querySelector("#startGame").addEventListener("submit", () => {
             startGameFn(document.querySelector("input[name='gameMode']:checked").value, document.querySelector("#userName").value);
         }, false);
@@ -74,5 +76,11 @@ class InterfaceHTMLToJS {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-
+    turnMusicOnOff(){
+        if(document.querySelector("#soundONOFF").checked){
+            this.gameAudio.play();
+        }else{
+            this.gameAudio.pause();
+        }
+    }
 }

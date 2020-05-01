@@ -6,6 +6,14 @@ const ArrForSSPLS = [["scissor", "stone", "paper"],
 
 class GameView {
     isCountdownRunning = false;
+    winEffect = document.querySelector("#winEffect");
+    failureEffect = document.querySelector("#failureEffect");
+    constructor() {
+        this.winEffect.loop = false;
+        this.winEffect.volume = 0.8;
+        this.failureEffect.loop = false;
+        this.failureEffect.volume = 0.8;
+    }
     setRuleImgSrc(gameMode) {
         let rulesString = "";
         switch (gameMode) {
@@ -81,7 +89,18 @@ class GameView {
     sleep(milliseconds) {
         return new Promise(resolve => setTimeout(resolve, milliseconds));
     }
-    async countdown() {
+    async countdown(hasWon) {
+        if (document.querySelector("#effectONOFF").checked === true) {
+            switch(hasWon) {
+                case winner_e.player:
+                    this.winEffect.play();
+                    break;
+                case winner_e.computer:
+                    this.failureEffect.play();
+                    break;
+                default:
+            }
+        }
         if (document.querySelector("#countdownONOFF").checked === true) {
             this.isCountdownRunning = true;
             document.querySelector("#gamePlay").style.filter = "grayscale(100%) blur(8px)";

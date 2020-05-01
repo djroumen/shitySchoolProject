@@ -6,7 +6,7 @@ let manager;
 
 let isSimulationRunning = false;
 let isLocal = false;
-const secToWaitBetweenRound = 3;
+const secToWaitBetweenRound = 4; // Audio: 4Sec
 
 
 

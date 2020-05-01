@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
     <link rel="icon" type="image/png" href="https://i.pinimg.com/originals/d5/fa/63/d5fa636047992a12cc9c68a0e24bb846.png">
+
+    <audio id="epicSound">
+        <source src="sound/Two%20Steps%20From%20Hell%20-%2025%20Tracks%20Best%20of%20All%20Time%20_%20Most%20Powerful%20Epic%20Music%20Mix%20%5BPart%201%5D%20(128kbit_AAC).m4a">
+    </audio>
+    <audio id="winEffect">
+        <source src="sound/winning.mp3">
+    </audio>
+    <audio id="failureEffect">
+    <source src="sound/failure.mp3">
+</audio>
+
     <script src="js/init.js"></script>
     <script src="js/controller/game_c.js"></script>
     <script src="js/controller/manager_c.js"></script>
@@ -67,9 +78,7 @@
     </form>
 </div>
 <div id="gameSite" style="display: none" class="row justify-content-center">
-    <audio id="epicSound">
-        <source src="sound/Two%20Steps%20From%20Hell%20-%2025%20Tracks%20Best%20of%20All%20Time%20_%20Most%20Powerful%20Epic%20Music%20Mix%20%5BPart%201%5D%20(128kbit_AAC).m4a">
-    </audio>
+
     <div id="gamePlay" class="row justify-content-center">
         <!--placeholder-->
     </div>
@@ -89,12 +98,24 @@
         <div id="lastRound" class="d-flex justify-content-center align-middle">
             <!--placeholder-->
         </div>
-
-        <div id="countdown" class="d-flex justify-content-center align-middle">
-            <label for="countdownONOFF" class="col-xl-2">Countdown: </label>
-            <input id="countdownONOFF" type="checkbox" class="col-xl-1 text-left" checked data-toggle="toggle">
-            <div id="countdownText" class="col-xl-9 text-left">
-                <!--placeholder-->
+        <div id="option">
+            <h1 class="justify-content-center d-flex">options</h1>
+            <div id="optionContainer" class="row">
+                <div id="effect" class="row col-xl-6">
+                    <label for="effectONOFF" class="col-xl-2">effects: </label>
+                    <input id="effectONOFF" type="checkbox" class="col-xl-1 text-left" checked data-toggle="toggle">
+                </div>
+                <div id="sound" class="row col-xl-6">
+                    <label for="soundONOFF" class="col-xl-2">sound: </label>
+                    <input id="soundONOFF" type="checkbox" class="col-xl-1 text-left" checked data-toggle="toggle">
+                </div>
+                <div id="countdown" class="row col-xl-6">
+                    <label for="countdownONOFF" class="col-xl-2">countdown: </label>
+                    <input id="countdownONOFF" type="checkbox" class="col-xl-1 text-left" checked data-toggle="toggle">
+                    <div id="countdownText" class="col-xl-9 text-left">
+                        <!--placeholder-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
