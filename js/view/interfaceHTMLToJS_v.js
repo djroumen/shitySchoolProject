@@ -43,7 +43,9 @@ class InterfaceHTMLToJS {
         } else {
             document.querySelector("#scoreboardSite").style.display = "none";
             document.querySelector("#gameSite").style.display = "initial";
-            this.gameAudio.play();
+            if(document.querySelector("#soundONOFF").checked){
+                this.gameAudio.play();
+            }
         }
     }
 
