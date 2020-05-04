@@ -7,7 +7,7 @@ class InterfaceHTMLToJS {
         this.gameAudio.loop = true;
         this.gameAudio.volume = 0.2;
 
-        document.querySelector("#soundONOFF").addEventListener("change", () => this.turnMusicOnOff())
+        document.querySelector("#musicONOFF").addEventListener("change", () => this.turnMusicOnOff())
 
         document.querySelector("#startGame").addEventListener("submit", () => {
             startGameFn(document.querySelector("input[name='gameMode']:checked").value, document.querySelector("#userName").value);
@@ -43,7 +43,7 @@ class InterfaceHTMLToJS {
         } else {
             document.querySelector("#scoreboardSite").style.display = "none";
             document.querySelector("#gameSite").style.display = "initial";
-            if(document.querySelector("#soundONOFF").checked){
+            if(document.querySelector("#musicONOFF").checked){
                 this.gameAudio.play();
             }
         }
@@ -79,7 +79,7 @@ class InterfaceHTMLToJS {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
     turnMusicOnOff(){
-        if(document.querySelector("#soundONOFF").checked){
+        if(document.querySelector("#musicONOFF").checked){
             this.gameAudio.play();
         }else{
             this.gameAudio.pause();
