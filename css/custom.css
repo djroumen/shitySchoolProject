@@ -108,9 +108,8 @@ gameplay
     margin-bottom: 10px;
 }
 
-#gamePlay img:hover {
-   /* transition: all 2s;
-    transform: rotateY(720deg);*/
+#gamePlay img:hover{
+    transform: scale(0.8) rotate(-20deg);
     cursor: pointer;
 }
 
