@@ -83,7 +83,6 @@ class Game {
             console.log("ComputerChoice: " + computerSelection);
             winner = this.compareHands(this.hands[playerSelection], this.hands[computerSelection]);
         } else {
-            //ToDo Asynchrone Scheissdreck aufräumen
             let data = await play_fetch(this.player.name, playerSelection);
             let result = this.interpretServerData(data);
             computerSelection = result[0];

@@ -67,7 +67,7 @@ class InterfaceHTMLToJS {
 
     goBackToScore() {
         this.changeSite(true);
-        scoreboard[game.gameMode].addPlayer(game.player);   //ToDo nicht VIEW
+        scoreboard[game.gameMode].addPlayer(game.player);   //ToDo eigendlich nicht in VIEW
         scoreboard[game.gameMode].updateHTML();
     }
 
