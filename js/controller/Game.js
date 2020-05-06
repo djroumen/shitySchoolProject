@@ -11,6 +11,8 @@ class Game {
     srcString = "img/";
     gameView = new GameView();
     hands = [];
+    isCountdownRunning = false;
+    workOnARound = false;
 
 
     constructor(playerName, gameMode) {
@@ -65,6 +67,13 @@ class Game {
         console.log("playable Hands: " + JSON.stringify(this.hands));
     }
 
+    playARound(symbol) {
+        if (!this.workOnARound) {
+            this.workOnARound = true;
+            isLocal ? this.calcWinner(symbol) : this.calcWinner(symbol, true);
+        }
+    }
+
     async calcWinner(playerSelection, isServer = false) {
         console.log("Playerchoice: " + playerSelection);
         let winner;
@@ -99,11 +108,13 @@ class Game {
                 console.log("calc error");
 
         }
+        this.playWinLoseEffect(winner);
         this.gameView.updateScore(this.player.score, this.player.computerScore);
         this.gameView.updateLastRound(this.gameMode, this.srcString, playerSelection, computerSelection);
         this.gameView.addNewHistoryEntry(this.gameMode, this.srcString, this.player.name, playerSelection, computerSelection, winnerString);
         console.log("Winner: " + winnerString);
-        await this.gameView.countdown(winner);
+        await this.countdown();
+        this.workOnARound = false;
     }
 
     compareHands(playerHand, computerHand) {
@@ -173,5 +184,37 @@ class Game {
                 break;
         }
         return [serverSelection, winner];
+    }
+
+    playWinLoseEffect(hasWon) {
+        if (this.gameView.giveEffectBoxValue() === true) {
+            switch (hasWon) {
+                case winner_e.player:
+                    audioView.playWinEffect();
+                    break;
+                case winner_e.computer:
+                    audioView.playFailureEffect();
+                    break;
+                default:
+            }
+        }
+    }
+
+    sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    }
+
+    async countdown() {
+        if (this.gameView.giveCountdownBoxValue() === true) {
+            this.gameView.disablePlayButtons(true);
+            let seconds = secToWaitBetweenRound;
+            while (seconds > 0) {
+                this.gameView.printCountdown(seconds);
+                await this.sleep(1000);
+                seconds--;
+            }
+            this.gameView.printCountdown(0);
+            this.gameView.disablePlayButtons(false);
+        }
     }
 }

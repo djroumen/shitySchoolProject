@@ -4,9 +4,8 @@ constants
 --------------------------------------------------------------------------------*/
 let manager;
 
-let isSimulationRunning = false;
 let isLocal = false;
-const secToWaitBetweenRound = 4; // Audio: 4Sec
+const secToWaitBetweenRound = 4; // Audio-lenght: 4Sec
 
 
 
@@ -26,5 +25,5 @@ window.onscroll = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    manager = new Manager();
+    manager = new MainManager();
 });

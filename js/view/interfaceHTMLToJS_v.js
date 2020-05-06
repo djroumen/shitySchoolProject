@@ -2,12 +2,9 @@
 
 
 class InterfaceHTMLToJS {
-    gameAudio = document.querySelector("#epicSound");
-    constructor(startGameFn) {
-        this.gameAudio.loop = true;
-        this.gameAudio.volume = 0.2;
 
-        document.querySelector("#musicONOFF").addEventListener("change", () => this.turnMusicOnOff())
+    constructor(startGameFn) {
+        document.querySelector("#musicONOFF").addEventListener("change", () => audioView.turnMusicOnOff())
 
         document.querySelector("#startGame").addEventListener("submit", () => {
             startGameFn(document.querySelector("input[name='gameMode']:checked").value, document.querySelector("#userName").value);
@@ -39,12 +36,13 @@ class InterfaceHTMLToJS {
         if (toScoreSite) {
             document.querySelector("#scoreboardSite").style.display = "initial";
             document.querySelector("#gameSite").style.display = "none";
-            this.gameAudio.load();
+            audioView.stopGameAudio();
+
         } else {
             document.querySelector("#scoreboardSite").style.display = "none";
             document.querySelector("#gameSite").style.display = "initial";
             if(document.querySelector("#musicONOFF").checked){
-                this.gameAudio.play();
+                audioView.startGameAudio();
             }
         }
     }
@@ -61,16 +59,15 @@ class InterfaceHTMLToJS {
             document.querySelector("#changingMode").innerHTML = "current mode: server - click to change mode";
             localContainer.forEach(e => e.style.display = "none");
             serverContainer.forEach(e => e.removeAttribute("style"));
-            scoreboard[gameMode_e.server].loadScoreServer();  //ToDo Funktion/Befehl anpassen
+            scoreboard[gameMode_e.server].loadScoreServer();
         }
 
 
     }
 
-    //ToDo Funktion/Befehl anpassen
     goBackToScore() {
         this.changeSite(true);
-        scoreboard[game.gameMode].addPlayer(game.player);   //ToDo Weg von hier
+        scoreboard[game.gameMode].addPlayer(game.player);   //ToDo nicht VIEW
         scoreboard[game.gameMode].updateHTML();
     }
 
@@ -78,11 +75,6 @@ class InterfaceHTMLToJS {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-    turnMusicOnOff(){
-        if(document.querySelector("#musicONOFF").checked){
-            this.gameAudio.play();
-        }else{
-            this.gameAudio.pause();
-        }
-    }
+
+
 }

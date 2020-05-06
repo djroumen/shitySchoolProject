@@ -11,7 +11,7 @@ class Scoreboard {
     }
 
     addPlayer(player) {
-        let newNode = new ScoreNode(player);
+        let newNode = new ScoreboardNode(player);
         let ratioNewNode = player.giveRatio(newNode.player.score, newNode.player.computerScore);
         let ratioOther = 0.0;
         if (this.first === null) {

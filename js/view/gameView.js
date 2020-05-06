@@ -5,15 +5,8 @@ const ArrForSSPLS = [["scissor", "stone", "paper"],
 
 
 class GameView {
-    isCountdownRunning = false;
-    winEffect = document.querySelector("#winEffect");
-    failureEffect = document.querySelector("#failureEffect");
-    constructor() {
-        this.winEffect.loop = false;
-        this.winEffect.volume = 0.8;
-        this.failureEffect.loop = false;
-        this.failureEffect.volume = 0.8;
-    }
+
+
     setRuleImgSrc(gameMode) {
         let rulesString = "";
         switch (gameMode) {
@@ -66,15 +59,11 @@ class GameView {
         container.setAttribute("class", classString);
         container.setAttribute("alt", ArrForSSPLS[gameMode][symbol]);
         container.addEventListener("click", () => {
-            this.playARound(symbol);
+            game.playARound(symbol);
         });
         return container;
     }
-    playARound(symbol){
-        if(!this.isCountdownRunning){
-            isLocal ? game.calcWinner(symbol) : game.calcWinner(symbol, true);
-        }
-    }
+
 
     printNames(name) {
         document.querySelector("#gameScoreNames").innerText = "Computer : " + name;
@@ -84,36 +73,27 @@ class GameView {
     updateScore(playerScore, computerScore) {
         document.querySelector("#gameScoreValue").innerText = computerScore.toString() + " : " + playerScore.toString();
     }
-
-
-    sleep(milliseconds) {
-        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    giveCountdownBoxValue(){
+        return document.querySelector("#countdownONOFF").checked;
     }
-    async countdown(hasWon) {
-        if (document.querySelector("#effectONOFF").checked === true) {
-            switch(hasWon) {
-                case winner_e.player:
-                    this.winEffect.play();
-                    break;
-                case winner_e.computer:
-                    this.failureEffect.play();
-                    break;
-                default:
-            }
-        }
-        if (document.querySelector("#countdownONOFF").checked === true) {
-            this.isCountdownRunning = true;
+    giveEffectBoxValue(){
+        return document.querySelector("#effectONOFF").checked;
+    }
+    disablePlayButtons(buttonsDisable) {
+        if (buttonsDisable) {
             document.querySelector("#gamePlay").style.filter = "grayscale(100%) blur(8px)";
-            let seconds = secToWaitBetweenRound;
-            while (seconds > 0) {
-                document.querySelector("#countdownText").innerHTML = seconds + " seconds until next round...";
-                seconds--;
-                await this.sleep(1000);
-            }
-            document.querySelector("#countdownText").innerHTML = "";
+        } else {
             document.querySelector("#gamePlay").style.filter = "none";
-            this.isCountdownRunning = false;
         }
     }
+    printCountdown(seconds){
+        if(seconds>0){
+            document.querySelector("#countdownText").innerHTML = seconds + " seconds until next round...";
+        }else{
+            document.querySelector("#countdownText").innerHTML = "";
+        }
+
+    }
+
 
 }

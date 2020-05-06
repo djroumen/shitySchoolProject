@@ -1,6 +1,6 @@
 "use strict";
 
-class ScoreNode {
+class ScoreboardNode {
     player = null;
     below = null;
 

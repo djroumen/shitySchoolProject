@@ -7,13 +7,15 @@ const gameMode_e = {
 };
 let scoreboard;
 let interfaceHTMLToJS;
+let audioView;
 let game;
 
 
-class Manager {
+class MainManager {
 
     constructor() {
         scoreboard = [new Scoreboard("#scoreboardStandard"), new Scoreboard("#scoreboardExpanded"), new Scoreboard("#scoreboardEscalation"), new Scoreboard("#scoreboardStandardServer")];
+        audioView = new AudioView();
         interfaceHTMLToJS = new InterfaceHTMLToJS(this.startGame);
     }
     startGame(gameMode, pName) {
@@ -21,9 +23,5 @@ class Manager {
         game = new Game(pName, parseInt(gameMode));
         console.log("start the game as " + pName);
         console.log(parseInt(gameMode));
-
     }
-
-
-
 }
